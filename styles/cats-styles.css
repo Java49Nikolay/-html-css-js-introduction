@@ -1,5 +1,5 @@
 .logo {
-font-size: 1.5em;
+font-size: 3em;
 
  }
 .main-class {
@@ -15,7 +15,8 @@ text-align: center;
     
 }
 .details-title {
- display: block;
+display: block;
+
       
 }
 .thumbnails-list {
@@ -26,8 +27,8 @@ text-align: center;
 text-align: center;
 }
 .thumbnails-image {
-width: 5em;
-
+width: 7em;
+height: 7em;
 }
 .thumbnails-title {
 display: block;
