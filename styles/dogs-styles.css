@@ -114,13 +114,14 @@ body {
 .thumbnails-item:hover {
   transform: scale(1.1);
   margin-left: 1vw;
+  border: solid 3px red;
 }
 @media(min-width: 560px) {
     :root {
         --thumbnails-img-width: 12vw;
         --thumbnails-img-height: 8vw;
-        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.25)
-    }
+        --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.25)
+        }
 
     .logo {
         font-size: 1.8em;
@@ -154,6 +155,9 @@ body {
         left: 0;
         bottom: 4vw;
     }
+    .thumbnails-item:hover {
+        border: solid 3px red;
+    }
 
     @media (min-width: 900px) {
         .thumbnails-list {
@@ -181,8 +185,11 @@ body {
         .details-image {
             width: 45vw;
             height: 35vw;
+
         }
-        
+            .thumbnails-item:hover {
+        border: solid 3px red;
+    }
     }
 
 
