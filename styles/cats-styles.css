@@ -63,14 +63,14 @@ body {
 }
 
 .details-title {
-    display: block;
+    display: flex;
     font-family: airstream;
     font-style: italic;
     background-color: beige;
     position: absolute;
-    left: 3vw;
-    bottom: 2vw;
-
+    left: 45vw;
+    bottom: 50vw;
+    
 
 }
 
@@ -113,14 +113,15 @@ body {
 }
 .thumbnails-item:hover {
   transform: scale(1.1);
-  margin-left: 1vw;
+  margin-left: 3vw;
+  border: solid 5px red;
 }
 @media(min-width: 560px) {
     :root {
         --thumbnails-img-width: 12vw;
         --thumbnails-img-height: 8vw;
-        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.25)
-    }
+        --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.25)
+        }
 
     .logo {
         font-size: 1.8em;
@@ -129,7 +130,7 @@ body {
     .thumbnails-list {
         flex-direction: column;
         flex-wrap: nowrap;
-        max-height: 75vh;  
+        max-height: 75vh;
         order: -1;
         justify-content: flex-start;
     }
@@ -151,15 +152,20 @@ body {
         margin-bottom: 0;
     }
     .details-title {
-        left: 0;
-        bottom: 4vw;
+       left: 20vw;
+        bottom: 75vw;
+    }
+    .thumbnails-item:hover {
+        border: solid 3px red;
     }
 
     @media (min-width: 900px) {
         .thumbnails-list {
             padding-right: 2vw;
-            margin-top: 2.5vh;
+            margin-top: 3.5vh;
             max-height: 86vh;
+            flex-wrap: nowrap;
+    
         }
 
         .thumbnails-title {
@@ -167,22 +173,26 @@ body {
         }
 
         .details-container {
-            margin-top: 5vh;
-            margin-right: 5vw;
+            margin-top: 3vh;
+            margin-right: 2vw;
         }
 
         
 
         .details-title {
             font-size: 1.5em;
-            bottom: 9vw
+            left: 20vw;
+            bottom: 45vw;
         }
 
         .details-image {
             width: 45vw;
             height: 35vw;
+
         }
-        
+            .thumbnails-item:hover {
+        border: solid 3px red;
+    }
     }
 
 
