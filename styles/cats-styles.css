@@ -45,6 +45,10 @@ body {
     justify-content: center;
     flex-grow: 1;
 }
+.details-frame {
+    color: hotpink;
+
+}
 
 .details-container {
     display: flex;
@@ -113,14 +117,14 @@ body {
 }
 .thumbnails-item:hover {
   transform: scale(1.1);
-  margin-left: 3vw;
-  border: solid 5px red;
+  margin-left: 1vw;
+  border: solid 3px red;
 }
-@media(min-width: 560px) {
+@media(min-width: 568px) {
     :root {
         --thumbnails-img-width: 12vw;
         --thumbnails-img-height: 8vw;
-        --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.25)
+        --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.25);
         }
 
     .logo {
@@ -143,7 +147,7 @@ body {
 
     .details-image {
         width: 45vw;
-        height: 38vw;
+        height: 35vw;
     }
 
     .details-container {
@@ -153,18 +157,20 @@ body {
     }
     .details-title {
        left: 20vw;
-        bottom: 75vw;
+        bottom: 30vw;
     }
     .thumbnails-item:hover {
         border: solid 3px red;
+    }
+    .details-frame {
+        color: hotpink;
     }
 
     @media (min-width: 900px) {
         .thumbnails-list {
             padding-right: 2vw;
-            margin-top: 3.5vh;
+            margin-top: 2.5vh;
             max-height: 86vh;
-            flex-wrap: nowrap;
     
         }
 
@@ -172,9 +178,11 @@ body {
             font-size: 1.5em;
         }
 
+
         .details-container {
-            margin-top: 3vh;
-            margin-right: 2vw;
+            margin-top: 5vh;
+            margin-right: 5vw;
+    
         }
 
         
@@ -182,7 +190,7 @@ body {
         .details-title {
             font-size: 1.5em;
             left: 20vw;
-            bottom: 45vw;
+            bottom: 30vw;
         }
 
         .details-image {
@@ -190,10 +198,11 @@ body {
             height: 35vw;
 
         }
-            .thumbnails-item:hover {
-        border: solid 3px red;
+        .thumbnails-item:hover {
+            border: solid 3px red;
+        }
+        .details-frame {
+            color: hotpink;
+        }
     }
-    }
-
-
 }
