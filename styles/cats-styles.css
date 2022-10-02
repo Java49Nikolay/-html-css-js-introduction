@@ -119,9 +119,8 @@ body {
   margin-left: 1vw;
   border: solid 3px red;
 }
-@media(min-width: 568px) {
-    :root {
-        --thumbnails-img-width: 12vw;
+@media(min-width: 560px) {
+    :root {        --thumbnails-img-width: 12vw;
         --thumbnails-img-height: 8vw;
         --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.33);
         }
