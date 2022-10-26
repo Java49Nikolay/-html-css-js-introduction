@@ -1,3 +1,5 @@
+
+
 @font-face {
     font-family: lakeshore;
     src: url("fonts/LAKESHOR-webfont.svg");
@@ -58,6 +60,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10vh;
+    transition: 5s cubic-bezier(0.1, 2, 0.9, 1);
 
 
 }
@@ -141,7 +144,10 @@ body {
     transform: scale(1.1);
     margin-left: 1vw;
 }
-
+.is-point {
+     transform: scale(0.001);  
+     transition: 0s; 
+}
 @media(min-width: 560px) {
     :root {
         --thumbnails-img-width: 12vw;
@@ -159,24 +165,23 @@ body {
         max-height: 75vh;
         order: -1;
         justify-content: flex-start;
-        padding-right: 2vh;
-    
     }
     .hidden .thumbnails-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
     }
+
     .main-class {
         flex-direction: row;
         justify-content: space-around;
 
     }
-    .main-class.hidden {
-        --thumbnails-img-width: 35vw;
-        --thumbnails-img-height: 25vw;
-     
+    .hidden.main-class {
+        --thumbnails-img-width: 18vw;
+        --thumbnails-img-height: 12vw;
+        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.25)
     }
 
     .details-image {
@@ -189,26 +194,28 @@ body {
         align-items: center;
         margin-bottom: 0;
     }
-    .hidden .thumbnails-title {
-        font-size: 1.5em;
-        display: block;
-        text-align: center;
-        height: var(--thumbnails-title-height);
-    }
     
+
+
     @media (min-width: 900px) {
         .thumbnails-list {
-
+            padding-right: 2vw;
             margin-top: 2.5vh;
             max-height: 86vh;
         }
-        .hidden .thumbnails-title {
+
+        .thumbnails-title {
             font-size: 1.5em;
         }
+
         .details-container {
             margin-top: 5vh;
             margin-right: 5vw;
         }
+
+
+
+        
 
         .details-image {
             width: 45vw;
