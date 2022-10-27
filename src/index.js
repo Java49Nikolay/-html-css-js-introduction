@@ -17,7 +17,6 @@ function setDetails(anchor) {
         audio.currentTime = 0;
     }, 5000)
 }
-
 for(let i = 0; i < anchors.length; i++) {
     anchors[i].addEventListener("click", function() {
         console.log("event - click on ", anchors[i]);
