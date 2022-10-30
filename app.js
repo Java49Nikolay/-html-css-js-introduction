@@ -26,7 +26,7 @@
 //}
 //Example
 //console.log(sumDigits(123)); //should be printed out 6
-function sumDigits(number) {
+function sumDigits (number) {
     if (number < 0)
          number = -number;
           for( sum = 0 ,rem = 0;number > 0;  )   {
