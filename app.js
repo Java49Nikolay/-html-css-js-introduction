@@ -29,7 +29,7 @@
 function sumDigits (number) {
     if (number < 0)
          number = -number;
-          for( sum = 0 ,rem = 0;number > 0;  )   {
+          for( sum = 0, rem = 0; number > 0;  )   {
  
              rem = number % 10;
              sum = sum + rem;
@@ -38,4 +38,5 @@ function sumDigits (number) {
           }
         return sum;
  }
- console.log("sum of digits" ,sumDigits(123));
+ console.log("returns=", sumDigits(123));
+ console.log("returns=", sumDigits(-623));
