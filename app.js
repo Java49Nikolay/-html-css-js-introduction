@@ -1,87 +1,69 @@
-// console.log("Hello world");
-// for( i = 0; i < 3; i++) {
-//     setTimeout(function(){
-//         console.log(i)
-//     });
+let ar = [];
+ar[10000] = 100;
+ar[1] = [1, 2, 3];
+console.log("length of array = ",ar.length);
+ar[0] = "hello";
+console.log("10000-th element = ", ar[10000]);
+console.log("0-th element = ", ar[0]);
+console.log("1-th element = ", ar[1]);
+let str = "Hello";
+let arStr = Array.from(str); //getting array of the string's symbols
+console.log("String 'Hello' -> array is ", arStr);
+// for (let i = 0; i < arStr.length; i++) {
+//     console.log("element at index ", i, arStr[i]);
 // }
-//i = 100;
-// for (let i = 0; i < 3; i++) {
-//     setTimeout(function () { console.log(i) });
-// } => 0 1 2
+function println(element, index, array) {
+    console.log("element at index ", index, element);
+}
+arStr.forEach(println);
+let arCodeAscii = arStr.map(function(symbol, index) {
+    return index % 2 == 0 ? symbol.charCodeAt() : symbol;
+});
+console.log(arStr, arCodeAscii);
+let sumAscii = arStr.reduce(function(res, cur) {
+    return res + cur.charCodeAt();
+}, 0);
+console.log("sum of ascii ", sumAscii)
+console.log(arStr.reduce(function(res, cur) {
+return res + cur
+}, ""));
+function getNumberOddIndex(element) {
+	let res = element * 2;
+	if (res > 9) {
+		res -= 9;
+	}
+	return res;
+}
+function getCurrentNumber(element, index) {
+		return index % 2 == 0 ? +element : getNumberOddIndex(element); 
+	}
+function getArrayForSum(teudatStrNumber) {
+		
+	let array = Array.from(teudatStrNumber);
+	return array.map(getCurrentNumber);
 
-// for (var i = 0; i < 3; i++) {
-//      console.log(i) ;
-// }
-// function sum(op1, op2) {
-//     let res = op1 + op2;
-//     return res;
-// }
-// let op1 = 10;
-// let op2 = 20;
-// let res = sum(op1, op2);
-// console.log(res)
-//function sumDigits(number) {
+}
+		/*
+		let res = [];
+		for (let i = 0; i < array.length; i++) {
+			res[i] = getCurrentNumber(array[i], i);
+		}
+		
+		return res;
+		*/
+
+//function checkTeudatZehut(teudatStrNumber) {
     //TODO
-    //function should return sum of a given number digits
+    //control sum of for even index digit value, for odd index digit * 2
+    //control sum should be divide on 10 with no remainder
+    //example 123456782 => 1 + 4 +3 + 8 +5 + 3 + 7 + 7 + 2 => true
+    //    123456783 => 1 + 4 +3 + 8 +5 + 3 + 7 + 7 + 3 => false
 //}
-//Example
-//console.log(sumDigits(123)); //should be printed out 6
-function sumDigits (number) {
-    if (number < 0)
-         number = -number;
-          for( sum = 0, rem = 0; number > 0;  )   {
- 
-             rem = number % 10;
-             sum = sum + rem;
-             number = (number - rem) / 10;
-             
-          }
-        return sum;
- }
- console.log("returns=", sumDigits(123));
- console.log("returns=", sumDigits(-623));
- 
- 
- //////////////////////////////////
-
- console.log("Hello world");
- for( i = 0; i < 3; i++) {
-     setTimeout(function(){
-         console.log(i)
-     });
- }
- i = 100;
- for (let i = 0; i < 3; i++) {
-     setTimeout(function () { console.log(i) });
- } 
-
- for (var i = 0; i < 3; i++) {
-      console.log(i) ;
- }
- function sum(op1, op2) {
-     let res = op1 + op2;
-     return res;
- }
- let op1 = 10; 
- let op2 = 20;
- let res = sum(op1, op2);
- console.log(res)
-
- function sumDigits(number) {
-    if(isNaN(number)) {
-        return 'NaN'
-    }
-    if(number<0) {
-        number =- number;
-    }
-     let sum = 0;
-     while(!(number == 0)) {
-        sum +=number % 10;
-        number = Math.floor(number/10);
-
-     }
-     return sum;
-    
- }
-
- console.log('sum=',sumDigits(123))
+//function generateRandomTeudatZehut() {
+    //TODO
+    //returns string of 9 symbols matching checkTeudatZehut
+    //make 8 random digits from 0 to 9
+    //9 - th symbol should be with accordance of matching
+    //to get random digit Math.round(Math.random() * 9)
+//
+//}
