@@ -6,6 +6,7 @@ body {
 .word-guess {
     display: flex;
     flex-direction: row;
+    margin-top: 3vh;
 }
 .letter-guess {
     font-size: 1.5em;
@@ -13,4 +14,7 @@ body {
     background-color: black;
     width: 3.5vw;
     text-align: center;
+}
+#quesion {
+
 }
