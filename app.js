@@ -1,17 +1,39 @@
-function createEmployee(id, name, birthYear, salary) {
-    return {id, name, birthYear, salary};
+//function f1() {
+//   const a = this;
+ //   return a;
+//}
+//const f2 = () => {
+ //   const a = this;
+ //   return a;
+//}
+//const f = f1;
+//f();
+//f2();
+//const rectangle = {
+//    width : 3,
+//   heidht: 5,
+//    square: function() {
+//     
+//   return this.width * this.heidht;
+//   },
+//    perimeter: function() => {
+//       return this.width * 2 + this.heidht * 2;
+//    },
+//    display: function() {
+//        console.log(`square is ${this.square()}; perimetr is ${this.perimeter()}`)
+//    }
+//}
+function Rectangle(width, heidht) {
+    this.width = width;
+    this.heidht = heidht;
 }
-const empl1 = createEmployee(123, "Vasya", 2000, 10000);
-const empl2 = empl1;
-console.log(empl1==empl2);
-function updateSalary(empl1, newSalary) {
-    empl1 = createEmployee(123, "Vasya", 2000, newSalary)
+Rectangle.prototype.square = function() {
+    return this.width * this.heidht;
 }
-updateSalary(empl1, 15000);
-console.log(empl1);
-function updateSalaryPrimitive(salary, newSalary) {
-    salary = newSalary;
+Rectangle.prototype.perimeter = function(){
+    return this.width * 2 + this.heidht * 2;
 }
-let salary = 10000;
-updateSalaryPrimitive(salary, 20000);
-console.log("salary", salary);
+const rectangle =new Rectangle(3, 5);
+consol.log(rectangle.square());
+consol.log(rectangle.perimeter());
+//rectangle.display();
