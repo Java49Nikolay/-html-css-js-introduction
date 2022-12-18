@@ -1,7 +1,7 @@
 import { Company } from "./data/company.js";
-import { EmployeeForm } from "./ui/employeeForm.js";
-import { EmployeesList } from "./ui/EmployeesList.js";
-import { SalariesForm } from "./ui/SalariesForm.js";
+import { EmployeeForm } from "./ui/BookForm.js";
+import { EmployeesList } from "./ui/BooksList.js";
+import { SalariesForm } from "./ui/PagesForm.js";
 const MIN_SALARY = 1000;
 const MAX_SALARY = 40000;
 const MIN_YEAR = 1950;
